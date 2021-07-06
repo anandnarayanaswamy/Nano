@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NasaAstronomyPicture.Api.Models
 {
@@ -12,17 +9,23 @@ namespace NasaAstronomyPicture.Api.Models
         [Key]
         public int Id { get; set; }
 
-        public string Copyright { get; set; }
+        public Guid ImageGUID { get; set; }
 
-        public string DateString { get; set; }
+        [Required]
+        public string Date { get; set; }
 
+        [Required]
         public string HdUrl { get; set; }
 
-        public string MediaType { get; set; }
+        [Required]
+        public string Media_Type { get; set; }
 
-        public string SdUrl { get; set; }
+        [Required] 
+        public string Url { get; set; }
 
+        [Required] 
         public string Title { get; set; }
 
+        public string Copyright { get; set; }
     }
 }
