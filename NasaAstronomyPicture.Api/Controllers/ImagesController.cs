@@ -32,23 +32,18 @@ namespace NasaAstronomyPicture.Api.Controllers
                 if (model == null)
                     return NoContent();
 
+                string imageURL = string.Empty;
+                if (!String.IsNullOrWhiteSpace(model.HdUrl))
+                    imageURL = $"{imageSeverUrl}/{model.HdUrl}";
+                else
+                    imageURL = $"{imageSeverUrl}/{model.Url}";
 
-                var mimeType = model.Media_Type switch
-                {
-                    "image" => "image/jpeg",
-                    "video" => "application/octet-stream",
-                    _ => throw new NotImplementedException()
-                };
+                string fileExtension = Path.GetExtension(imageURL).ToLower();
 
- 
-                string hdFilePath = $"{imageSeverUrl}/{model.HdUrl}";
-                string sdFilePath = $"{imageSeverUrl}/{model.Url}";
-                string fileExtension = Path.GetExtension(hdFilePath).ToLower();
-
-                var image = System.IO.File.OpenRead(hdFilePath);
+                var image = System.IO.File.OpenRead(imageURL);
                 return File(image, Extensions.GetMimeType(fileExtension));
 
-                //return Ok(model);
+                
             }
             catch (Exception ex)
             {
