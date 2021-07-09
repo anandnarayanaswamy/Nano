@@ -59,3 +59,4 @@ C:\Users\AnandNarayanaswamy\Downloads\NasaAstronomyPicture.Api\NasaAstronomyPict
 C:\Users\AnandNarayanaswamy\Downloads\NasaAstronomyPicture.Api\NasaAstronomyPicture.Api\obj\Debug\net5.0\ref\NasaAstronomyPicture.Api.dll
 C:\Users\AnandNarayanaswamy\Downloads\NasaAstronomyPicture.Api\NasaAstronomyPicture.Api\obj\Debug\net5.0\NasaAstronomyPicture.Api.pdb
 C:\Users\AnandNarayanaswamy\Downloads\NasaAstronomyPicture.Api\NasaAstronomyPicture.Api\obj\Debug\net5.0\NasaAstronomyPicture.Api.genruntimeconfig.cache
+C:\Users\AnandNarayanaswamy\Downloads\NasaAstronomyPicture.Api\NasaAstronomyPicture.Api\obj\Debug\net5.0\NasaAstronomyPicture.Api.csproj.AssemblyReference.cache

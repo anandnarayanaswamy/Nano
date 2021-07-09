@@ -168,7 +168,7 @@ namespace NasaAstronomyPicture.Api.Services
                 Regex r = new Regex(@"^\d{4}-\d{2}-\d{2}$");
 
                 if (!r.IsMatch(dateString))
-                    throw new FormatException($"{dateString} is not the correct format,  should be yyy-MM-dd");
+                    throw new FormatException($"{dateString} is not the correct format,  should be yyyy-MM-dd");
 
                 var value = DateTime.ParseExact(dateString, Extensions.formats, CultureInfo.InvariantCulture, DateTimeStyles.None);
 
